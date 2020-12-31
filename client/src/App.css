@@ -1,38 +1,46 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 100%;
+}
+
+
+.fill {
+  flex: 1 1
+}
+
+.fit {
+  flex: 0 1
+}
+
+.center {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  vertical-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.board {
+  background-image: url("./images/board.svg");
+  background-position: center; /* Center the image */  
+  min-height: 800px; /* You must set a specified height */
+  max-width: 800px;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: contain; /* Resize the background image to cover the entire container */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.board-item {
+  font-size: 48px;
+  width: 266px;
+  height: 266px;
+}
+
+.board-item:hover {
+  background-color:rgba(155, 155, 155, 0.3);
 }
